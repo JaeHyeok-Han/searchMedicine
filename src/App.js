@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import style from "./styles/App.module.css";
+import Loading from "./components/Loading.js";
+import Header from "./components/Header.js";
+import Map from "./components/Map.js";
+import Main from "./components/Main.js";
+import { useState, useEffect } from "react";
+import useStore from "./store/store.js";
+
+import data from "./data/data.js";
+function testData() {
+  return data;
+}
+
+async function getInitStoreList() {
+  const res = await fetch("api주소");
+  const jsonRes = await res.json();
+  return jsonRes;
+}
 
 function App() {
+  const { setStoreList } = useStore();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // const value = getInitStoreList();
+    const value = testData();
+    setStoreList(value);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+    return () => { };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.app}>
+      {isLoading ? <Loading /> : null}
+      <div className={style.container}>
+        <Header />
+        <Map />
+        <Main />
+      </div>
     </div>
   );
 }

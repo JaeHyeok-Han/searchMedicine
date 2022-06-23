@@ -1,0 +1,12 @@
+.mainContainer {
+  position: absolute;
+  width: 875px;
+  height: 962px;
+  left: 535px;
+  top: 47px;
+  border: 1px solid #000000;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

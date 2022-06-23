@@ -1,0 +1,45 @@
+.listItemContainer {
+  display: flex;
+  margin: 0 25px;
+  width: auto;
+  height: 70px;
+  border-bottom: 1px solid black;
+}
+.listItemContainer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.listItemContainer div:nth-child(1) {
+  width: 10%;
+}
+.listItemContainer div:nth-child(2) {
+  width: 25%;
+}
+.listItemContainer div:nth-child(3) {
+  width: 30%;
+}
+.listItemContainer div:nth-child(4) {
+  width: 25%;
+}
+.listItemContainer div:nth-child(5) {
+  width: 10%;
+}
+.typeBox {
+  padding: 7px 10px;
+  border-radius: 10px;
+}
+.zero {
+  background-color: #00E0C4;
+}
+.one {
+  background-color: #FF7B7B;
+}
+.play {
+ background-color: #A57CFF;
+}
+.noPlay {
+ background-color: #FF0000;
+}

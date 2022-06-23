@@ -1,0 +1,56 @@
+.searchBoxContainer {
+  margin-top: 40px;
+  width: 807px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bigCate {
+  width: 176px;
+  height: 52px;
+  border: 1px solid #969696;
+  border-radius: 14px;
+  padding-left: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../images/arrow-down.png") no-repeat 95% 50%;
+  font-size: 1rem;
+}
+.smallCate {
+  width: 150px;
+  height: 52px;
+  border: 1px solid #969696;
+  border-radius: 14px;
+  padding-left: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../images/arrow-down.png") no-repeat 95% 50%;
+  font-size: 1rem;
+}
+.searchText {
+  width: 330px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #A57CFF;
+  border-radius: 14px;
+  text-align: center;
+  color:#A57CFF;
+  font-size: 1.1rem;
+}
+.searchText:focus {
+  outline: none;
+}
+.searchText::placeholder {
+  color:#A57CFF;
+}
+.searchBtn {
+  width: 56px;
+  height: 48px;
+  background: #A57CFF;
+  border: 1px solid #A57CFF;
+  border-radius: 14px;
+  color: white;
+  font-size: 1.2rem;
+}
