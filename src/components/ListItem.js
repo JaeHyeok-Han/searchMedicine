@@ -1,5 +1,5 @@
 import style from "../styles/ListItem.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import useStore from "../store/store.js";
 
 const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
@@ -20,6 +20,7 @@ function isPlay(time) {
 function ListItem({ info }) {
   const { setCurrentStore } = useStore();
   const [play, setPlay] = useState(true);
+  const list = useRef();
 
   const clickItem = () => {
     setCurrentStore(info);
@@ -30,10 +31,10 @@ function ListItem({ info }) {
       setPlay(isPlay(info.time));
     }
     return () => { };
-  }, []);
+  }, [info.time]);
 
   return (
-    <div className={style.listItemContainer} onClick={clickItem}>
+    <div className={style.listItemContainer} onClick={clickItem} ref={list}>
       <div>{info.category === 0 ? <span className={`${style.typeBox} ${style.zero}`}>약국</span> : <span className={`${style.typeBox} ${style.one}`}>편의점</span>}</div>
       <div>{info.name}</div>
       <div>{info.addressName}</div>

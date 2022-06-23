@@ -1,12 +1,14 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 .mainContainer {
   position: absolute;
   width: 875px;
   height: 962px;
   left: 535px;
   top: 47px;
-  border: 1px solid #000000;
+  border: 3px solid #111;
   border-radius: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: Pretendard;
 }

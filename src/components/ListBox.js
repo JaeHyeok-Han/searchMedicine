@@ -13,10 +13,12 @@ function ListBox() {
         <span>주소</span>
         <span>전화번호</span>
         <span>영업여부</span>
-
       </div>
-      {storeList.map((ele, index) => <ListItem key={index} info={ele} />)}
-    </div>
+      <div className={style.listBox}>
+        {storeList.map((ele, index) => <ListItem key={index} info={ele} />)}
+      </div>
+
+    </div >
   )
 }
 

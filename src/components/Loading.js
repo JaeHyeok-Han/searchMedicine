@@ -21,7 +21,7 @@ function Loading() {
         </p>
         <div className={style.progBox}>
           <div className={style.prog} ref={prog} />
-          <div className={style.progText}>약속으로 들어가는 중</div>
+          <div className={style.progText}>약속으로 들어가는 중..</div>
         </div>
       </div>
     </div>

@@ -1,9 +1,18 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@font-face {
+  font-family: 'BMJUA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .listItemContainer {
   display: flex;
   margin: 0 25px;
   width: auto;
   height: 70px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ccc;
+  font-family: Pretendard;
 }
 .listItemContainer div {
   display: flex;
@@ -11,6 +20,7 @@
   justify-content: center;
   text-align: center;
   height: 100%;
+  cursor: pointer;
 }
 .listItemContainer div:nth-child(1) {
   width: 10%;
@@ -30,6 +40,7 @@
 .typeBox {
   padding: 7px 10px;
   border-radius: 10px;
+  color: white;
 }
 .zero {
   background-color: #00E0C4;
@@ -38,8 +49,10 @@
   background-color: #FF7B7B;
 }
 .play {
- background-color: #A57CFF;
+  background-color: #A57CFF;
+  font-family: BMJUA;
 }
 .noPlay {
- background-color: #FF0000;
+  background-color: #111;
+  font-family: BMJUA;
 }

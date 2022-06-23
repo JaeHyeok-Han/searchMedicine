@@ -1,12 +1,17 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 .listBoxContainer {
   margin-top: 30px;
   width: 807px;
-  height: 568px;
+  height: 548px;
   border-radius: 22px;
-  border: 1px solid black;
+}
+.listBox {
+  height: 530px;
+  overflow-y: scroll;
+  border-radius: 22px;
 }
 .header {
-  margin: 0 25px;
+  margin: 0 40px 0 25px;
   width: auto;
   height: 50px;
   border-bottom: 1px solid black;
@@ -16,6 +21,7 @@
   text-align: center;
   line-height: 3.5rem;
   height: 100%;
+  font-family: Pretendard;
 }
 .header span:nth-child(1) {
   width: 10%;
