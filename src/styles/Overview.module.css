@@ -155,10 +155,20 @@
 .Modal .listBox {
   width: 90%;
   height: auto;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.Modal .listBox::-webkit-scrollbar {
+  display: none;
 }
 .Modal .listBox div {
   height: 40px;
   border-bottom: 1px solid #eee;
+}
+.Modal .listBox span {
+  display: inline-block;
+  text-align: center;
+  line-height: 2.5rem;
 }
 .Modal .listBox span:nth-child(1) {
   width: 15%;

@@ -1,5 +1,6 @@
 import style from "../styles/SearchBox.module.css";
 import { useState } from 'react';
+import useStore from "../store/store.js";
 
 const Big_DATA = [
     '증상별 대분류', '소화기관', '감기질환', '외용약', '비뇨생식기 의약품', '이비인후과', '치과', '자양강장제', '심장 신경과제',
@@ -20,12 +21,21 @@ const Small_DATA = {
     '알레르기': ['먹는 약'],
     '기타': ['구충제', '멀미약']
 }
+
+
+
 function SearchBox() {
+    const { storeList, setStoreList } = useStore();
+
     const [currentBigType, setcurrentBigType] = useState("증상별 대분류");
     const [SmallType, setSmallType] = useState("증상별 소분류");
 
     const onChange = (e) => {
         setcurrentBigType(e.target.value);
+    }
+
+    const gara = () => {
+        setStoreList(storeList.slice(2, 5));
     }
 
     return (
@@ -37,7 +47,7 @@ function SearchBox() {
                 {currentBigType ? Small_DATA[currentBigType].map(e => <option key={e}>{e}</option>) : null}
             </select>
             <input type="text" placeholder="찾을 약품을 검색해주세요" style={style.mainContainer} className={style.searchText} />
-            <button className={style.searchBtn}>
+            <button className={style.searchBtn} onClick={gara}>
                 <i className="fas fa-search"></i>
             </button>
         </div>

@@ -28,8 +28,12 @@ function Overview() {
                 <span>재고</span>
               </div>
               <div className={style.listBox}>
-                {currentStore.pharMedicines.map((ele, index) => <div>
-                  <span>{index}</span>
+                {currentStore.pharMedicines ? currentStore.pharMedicines.map((ele, index) => <div key={index}>
+                  <span>{index + 1}</span>
+                  <span>{ele.name}</span>
+                  <span>{ele.stockNum}</span>
+                </div>) : currentStore.convMedicines.map((ele, index) => <div key={index}>
+                  <span>{index + 1}</span>
                   <span>{ele.name}</span>
                   <span>{ele.stockNum}</span>
                 </div>)}
